@@ -1,5 +1,4 @@
 cc = 1
-
 print()
 while True:
     lines = map(str, input().splitlines())
