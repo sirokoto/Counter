@@ -1,7 +1,9 @@
 cc = 1
-print()
-while True:
-    lines = map(str, input().splitlines())
-    for line in lines:
-        print(f'{cc}. {line}', end='\n')
+file_name = 'list.txt'
+try:
+    file = open(file_name, 'r')
+    for line in file.readlines():
+        print(f'{cc:}. {line:^20}')
         cc+=1
+except FileNotFoundError:
+    raise FileNotFoundError("File not found")
